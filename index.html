@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f1c" />
+  <title>ScamShield AI — Scam Awareness Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="ScamShield AI home">
+      <span class="brand-icon">S</span>
+      <span><strong>ScamShield</strong><small>AI SAFETY ASSISTANT</small></span>
+    </a>
+    <span class="demo-badge"><i></i> Prototype Demo</span>
+  </header>
+
+  <main class="layout">
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> DIGITAL SAFETY, MADE SIMPLE</div>
+      <h1>Pause. <span>Check.</span><br/>Verify.</h1>
+      <p class="hero-copy">Review suspicious links and messages for common warning signs before you act.</p>
+      <div class="trust-row">
+        <div class="trust-item"><span class="trust-icon">✓</span><span>Clear explanations</span></div>
+        <div class="trust-item"><span class="trust-icon">⌁</span><span>Privacy-first demo</span></div>
+      </div>
+    </section>
+
+    <section class="scanner card" aria-labelledby="scanner-title">
+      <div class="card-heading">
+        <div><p class="kicker">QUICK SCAN</p><h2 id="scanner-title">Check a link or message</h2></div>
+        <div class="shield">⌑</div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Scan type">
+        <button class="tab active" id="url-tab" type="button" role="tab" aria-selected="true" data-mode="url">🔗 Link check</button>
+        <button class="tab" id="message-tab" type="button" role="tab" aria-selected="false" data-mode="message">✉ Message check</button>
+      </div>
+      <form id="scan-form">
+        <label for="scan-input" id="input-label">Paste a URL to review</label>
+        <textarea id="scan-input" rows="4" placeholder="Example: http://example.com/login" maxlength="3000" required></textarea>
+        <div class="input-hint"><span id="input-hint">Check links you did not expect to receive.</span><span id="char-count">0 / 3000</span></div>
+        <div class="actions">
+          <button class="primary-btn" type="submit"><span>Analyse now</span><b>→</b></button>
+          <button class="secondary-btn" id="clear-btn" type="button">Clear</button>
+        </div>
+      </form>
+      <div class="examples">
+        <span>TRY A SAMPLE</span>
+        <button type="button" class="example-btn" data-example="url">Suspicious URL</button>
+        <button type="button" class="example-btn" data-example="message">Scam-style message</button>
+      </div>
+      <div id="result" class="result hidden" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <section class="how-section">
+    <div class="section-title"><p class="kicker">HOW IT WORKS</p><h2>A clearer way to pause before you click.</h2></div>
+    <div class="steps">
+      <article class="step card"><span class="step-number">01</span><h3>Enter</h3><p>Paste a URL or a suspicious message into the checker.</p></article>
+      <article class="step card"><span class="step-number">02</span><h3>Review signals</h3><p>The demo checks for common patterns that can deserve attention.</p></article>
+      <article class="step card"><span class="step-number">03</span><h3>Choose safely</h3><p>Read the reasons and verify through an official channel.</p></article>
+    </div>
+  </section>
+
+  <section class="notice">
+    <div class="notice-symbol">!</div>
+    <div><strong>Important: this is an educational prototype.</strong><p>It uses simple local rules, not live threat intelligence or a real AI model. A low-risk result does not prove a link or message is safe. Never share passwords, PINs, or OTPs.</p></div>
+  </section>
+
+  <footer><span>© 2026 ScamShield AI · Limitless Minds</span><span>Student prototype · No data is sent to a server</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
